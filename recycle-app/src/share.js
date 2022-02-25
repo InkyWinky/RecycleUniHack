@@ -41,7 +41,7 @@ class UserList
             let newUser =data[i];
             this._userList[i] = newUser;
         };
-        
+
     }
 
 }
@@ -69,17 +69,17 @@ class User
     {
         this._name = newName
     }
-    
+
     modLocation =(newLocation) =>
     {
         this._location = newLocation
     }
-    
+
     modpc =(newpc) =>
     {
         this._pc = newpc
     }
-    
+
     modRange =(newRange) =>
     {
         this._range = newRange
@@ -231,7 +231,7 @@ class GlobalListings
             let newListing=data[i];
             this._globalListing[i] = newListing;
         };
-        
+
     }
 }
 //Local storage functions
