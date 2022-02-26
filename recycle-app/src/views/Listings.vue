@@ -8,8 +8,11 @@
                 <div class="form-field">
                     <label for="waste_type">Type of Waste</label>
                     <select v-model="waste_type" id="waste_type">
-                        <option>Recyclable</option>
-                        <option>Non-Recyclable</option>
+                        <option class="selectOption" value="soft-plastics"> Soft Plastics</option>
+                        <option class="selectOption" value="hard-plastics">Hard Plastics</option>
+                        <option class="selectOption" value="mixed-plastics">Mixed Plastics</option>
+                        <option class="selectOption" value="coffee-grounds">Coffee Grounds</option>
+                        <option class="selectOption" value="cardboard">Cardboard</option>
                     </select>
                         
                 </div>
@@ -19,7 +22,7 @@
                 </div>
                 <div class="form-field">
                     <label for="time">Pickup time</label>
-                    <!-- need help for time picker -->
+                    <input v-model="time" type="datetime-local">
                     <div> 
                         <label for="anytime">Anytime</label>
                         <input type="checkbox">
