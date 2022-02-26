@@ -1,6 +1,6 @@
 <template>
   <div id="nav">
-   
+  <i id = "logout-icon" v-if="$store.state.user" @click="$store.dispatch('logout')" class="fa-solid fa-right-from-bracket"></i>
   <div id="logo-heading" 
    v-if="$route.path === '/'"
    >
@@ -27,6 +27,9 @@
 
 
 <style>
+#logout-icon{
+  float: right;
+}
 .navigation{
 margin-top:70px;
 }

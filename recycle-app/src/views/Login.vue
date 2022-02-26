@@ -1,21 +1,36 @@
 <template>
   <main class="login">
       <section class = "form">
-          <form class="login">
-               <input id="username" class = "input-field" type="text" placeholder="Email or Username">
+          <form class="login" @submit.prevent="login">
+               <input id="username" class = "input-field" type="email" placeholder="Email"
+               v-model ="login_form.email">
                <br>
-                <input id="password" class = "input-field" type="password" placeholder="Password"><span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                <input id="password" class = "input-field" type="password" placeholder="Password"
+                v-model="login_form.password"><span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+           <input type="submit" value="Login" id="login-btn" />
           </form>
-       <button id="login-btn" >
-  Login
-</button>
+      
+
     </section>
   </main>
 </template>
 
 <script>
+import {ref} from 'vue'
+import {useStore} from 'vuex'
 export default {
+setup (){
+    const login_form = ref({});
+    const store = useStore();
 
+    const login = () => {
+        store.dispatch('login', login_form.value);
+    }
+    return {
+        login_form,
+        login
+    }
+}
 }
 </script>
 
