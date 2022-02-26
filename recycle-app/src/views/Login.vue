@@ -2,7 +2,7 @@
   <main class="login">
       <section class = "form">
           <form class="register">
-              <h2>Register</h2>
+              <h2>Login</h2>
           </form>
           <form class="login"></form>
     </section>
@@ -17,8 +17,11 @@ export default {
 
 <style>
 @font-face {
-    font-family: 'Futura PT';
-    src: url("FuturaPT-Bold.ttf")
+    font-family: 'FuturaPT';
+    src: url("../assets/futuraPT/FuturaPT-Bold.ttf");
+    font-style: normal;
 }
-
+h {
+    font-family: FuturaPT
+}
 </style>
