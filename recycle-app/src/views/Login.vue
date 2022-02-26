@@ -4,7 +4,7 @@
           <form class="login">
                <input id="username" class = "input-field" type="text" placeholder="Email or Username">
                <br>
-                <input id="password" class = "input-field" type="password" placeholder="Password"><span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                <input id="password" class = "input-field" type="password" placeholder="Password"><span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
           </form>
        <button id="login-btn" >
   Login
@@ -34,7 +34,7 @@ export default {
     font-style: normal;
 }
 #login-btn{
-  background-color: #FF6464;
+  background-color: #FFE164;
     box-shadow:10px 10px 10px rgba(0, 0, 0, 0.1);;
   border-radius: 15px;
 
