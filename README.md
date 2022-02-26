@@ -1,2 +1,2 @@
-# RecycleUniHack
-Educational recycling app for unihack
+# Trashy.
+An upcycling innovation

@@ -121,10 +121,8 @@ body {
  background-position: center;
   background-repeat: no-repeat;
 }
-.logo{
-  width:60px;
-  margin-top: 10%;
-}
+
+
 label{
   margin: 10px;
 }
