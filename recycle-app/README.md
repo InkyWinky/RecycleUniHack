@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+cd recycle-app
 npm install
 ```
 
