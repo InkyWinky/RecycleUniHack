@@ -140,7 +140,7 @@ class Waste
 {
     constructor(user,type,location,pc,qty,time)
     {
-        this._user = user//name rather than object here
+        this._user = user
         this._type = type
         this._location = location
         this._pc = pc 

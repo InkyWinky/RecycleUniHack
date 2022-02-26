@@ -1,0 +1,20 @@
+<template>
+    <h3>
+      {{ Waste.type }} {{Waste.pc}} {{Waste.time}}
+    </h3>
+    <p>{{ task.day }}</p>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'Listing',
+  props: {
+    Waste: Object,
+  },
+}
+</script>
+
+<style scope>
+
+</style>
