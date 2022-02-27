@@ -21,7 +21,7 @@
 </select>
 <br>
 
-<button id="search-btn" >
+<button id="search-btn" @click="$store.dispatch('search')">
   <i class="fa-solid fa-magnifying-glass"></i>
   Search
 </button>
@@ -50,7 +50,7 @@
 }
 
 #search-btn{
-  background-color: #FFE164;
+  background-color: #F1CB4C;
     box-shadow:10px 10px 10px rgba(0, 0, 0, 0.1);;
   border-radius: 15px;
   margin: 40px;
@@ -61,7 +61,7 @@
    width: 150px;
 }
 #donate-btn{
-  background-color: #FF6464;
+  background-color: #FF005E;
     box-shadow:10px 10px 10px rgba(0, 0, 0, 0.1);;
   border-radius: 15px;
 
@@ -116,7 +116,7 @@ html{
 body {
   height: 100%;
   margin: 0;
-  background-image: url("../../public/World_Map_Bg.png"), linear-gradient(#DB8383, #FFE2A9);
+  background-image: url("../../public/World_Map_Bg.png"), linear-gradient(#FF005E, #F1CB4C);
  background-size: cover;
  background-position: center;
   background-repeat: no-repeat;

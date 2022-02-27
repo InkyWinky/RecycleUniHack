@@ -7,6 +7,7 @@
                <br>
                 <input id="password" class = "input-field" type="password" placeholder="Password"
                 v-model="login_form.password"><span toggle="#password-field" class="fa fa-fw fa-eye-slash field-icon toggle-password"></span>
+                <br>
            <input type="submit" value="Login" id="login-btn" />
           </form>
       

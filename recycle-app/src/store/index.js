@@ -75,6 +75,9 @@ export default createStore({
     commit('CLEAR_USER')
     router.push('/login')
   },
+  async search (){
+    router.push('/listings')
+  }
   // fetchUser ({commit}){
   //   auth.onAuthStateChanged(async user => {
   //     if (user === null) {
