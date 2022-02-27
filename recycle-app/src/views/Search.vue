@@ -1,8 +1,8 @@
+<template>
 <main class="listings">
     <div id="mapContainer" class="base-map"></div>
   </main>
 </template>
-
 <script>
 import mapboxgl from "mapbox-gl";
 

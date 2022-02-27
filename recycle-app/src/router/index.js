@@ -1,8 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import Listings from '../views/Listings.vue'
-import GlobalListings from '../views/Global_listings.vue'
-
 import {auth} from '../firebase'
 const routes = [
   {
@@ -23,14 +20,6 @@ const routes = [
     }
   },
   {
-    path:'/Search',
-    name: 'Search',
-    component: () => import(/* webpackChunkName: "about" */ '../views/Search.vue')
-  },
-  {
-    path:'/Global_listings',
-    name: 'Global_listings',
-    component: GlobalListings,
     path: '/login',
     name: 'Login',
     // route level code-splitting
@@ -47,12 +36,12 @@ const routes = [
     component: () => import(/* webpackChunkName: "about" */ '../views/Register.vue')
   },
   {
-    path: '/listings',
-    name: 'Listings',
+    path: '/search',
+    name: 'Search',
     // route level code-splitting
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Listings.vue')
+    component: () => import(/* webpackChunkName: "about" */ '../views/Search.vue')
   }
 ];
 
