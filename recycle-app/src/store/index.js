@@ -17,7 +17,7 @@ export default createStore({
     state.user = user
   },
     CLEAR_USER (state) {
-      state.user = null
+      state.user = null;
     }
   },
   actions: {
