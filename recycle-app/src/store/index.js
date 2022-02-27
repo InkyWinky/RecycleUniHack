@@ -77,7 +77,7 @@ export default createStore({
     router.push('/login')
   },
   async search (){
-    router.push('/listings')
+    router.push('/search')
   }
   // fetchUser ({commit}){
   //   auth.onAuthStateChanged(async user => {

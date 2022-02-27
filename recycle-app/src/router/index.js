@@ -23,9 +23,9 @@ const routes = [
     }
   },
   {
-    path:'/Listings',
-    name: 'Listings',
-    component: Listings
+    path:'/Search',
+    name: 'Search',
+    component: () => import(/* webpackChunkName: "about" */ '../views/Search.vue')
   },
   {
     path:'/Global_listings',
