@@ -1,71 +1,73 @@
 <template>
-  <main class="listings">
-    <div id="mapContainer" class="base-map"></div>
-  </main>
+    <div class="title">
+        <header>
+            <h2>Create Listing</h2>
+        </header>
+        <div>
+            <form>
+                <div class="form-field">
+                    <label for="waste_type">Type of Waste</label>
+                    <select v-model="waste_type" id="waste_type">
+                        <option class="selectOption" value="soft-plastics"> Soft Plastics</option>
+                        <option class="selectOption" value="hard-plastics">Hard Plastics</option>
+                        <option class="selectOption" value="mixed-plastics">Mixed Plastics</option>
+                        <option class="selectOption" value="coffee-grounds">Coffee Grounds</option>
+                        <option class="selectOption" value="cardboard">Cardboard</option>
+                    </select>
+                        
+                </div>
+                <div class="form-field">
+                    <label for="qty">Quantity of Waste</label>
+                    <input v-model="qty" type="number" id="qty">
+                </div>
+                <div class="form-field">
+                    <label for="time">Pickup time</label>
+                    <input v-model="time" type="datetime-local">
+                    <div> 
+                        <label for="anytime">Anytime</label>
+                        <input type="checkbox">
+                    </div>
+                        
+                </div>
+                <div id="submit">
+                    <button @click=onSubmit()>Create Listing</button>
+                </div>
+
+
+
+            </form>
+        </div>
+        <div>
+            Results: User wants to list {{waste_type}} for Quantity: {{qty}} at {{time}}
+        </div>
+
+    </div>
 </template>
-
 <script>
-import mapboxgl from "mapbox-gl";
 
-// import {ref} from 'vue'
-// import {useStore} from 'vuex'
-export default {
-    name: "BaseMap",
-  data() {
-    return {
-      accessToken: "pk.eyJ1IjoiaWxpbjAwMDUiLCJhIjoiY2wwMjZrbnIyMGFkMjNjbWpuNDhna281aCJ9.ltygm0xClurI8P_1QSPF8w",
-    };
-  },
-  mounted() {
-    mapboxgl.accessToken = this.accessToken;
+export default ({
+    name: 'Add Listing',
+    data() {
+        return {
+        waste_type: '',
+        qty: '',
+        time: '',
+        }
+    },
+    methods: {
+        onSubmit()
+        {
+            let newWaste =
+            {
+                type: this.waste_type,
+                qty: this.qty,
+                time: this.time    
+            }
+            console.log(newWaste)
 
-    new mapboxgl.Map({
-      container: "mapContainer",
-      style: "mapbox://styles/mapbox/streets-v11",
-      center: [145.107214,-37.938393], 
-    //    center: [103.811279, 1.345399],
-      //clayton
-    //    maxBounds: [
-    //     [103.6, 1.1704753],
-    //     [104.1, 1.4754753],
-    //   ],
-      zoom: 12,
-      
-    });
-  },
-}</script>
 
-<style>
-
-@font-face {
-    font-family: 'FuturaPT';
-    src: url("../assets/futuraPT/FuturaPT-Bold.ttf");
-    font-style: normal;
+        }
+    }
 }
-#login-btn{
-  background-color: #FFE164;
-    box-shadow:10px 10px 10px rgba(0, 0, 0, 0.1);;
-  border-radius: 15px;
-
-  font-family: FuturaPT-bold;
-   border: none;
-   padding: 10px;
-   color: white;
-   width: 150px;
-}
-
-.listings {
-    text-align: center;
-    margin: auto;
-}
-.base-map {
-    margin: auto;
-    text-align: center;
-    height: 200px;
-    width: 300px;
-    border-radius: 15px;
-    overflow: hidden;
-}
-</style>  
-
-
+)
+</script>

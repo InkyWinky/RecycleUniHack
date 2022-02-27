@@ -1,5 +1,8 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Listings from '../views/Listings.vue'
+import GlobalListings from '../views/Global_listings.vue'
+
 import {auth} from '../firebase'
 const routes = [
   {
@@ -20,6 +23,14 @@ const routes = [
     }
   },
   {
+    path:'/Listings',
+    name: 'Listings',
+    component: Listings
+  },
+  {
+    path:'/Global_listings',
+    name: 'Global_listings',
+    component: GlobalListings,
     path: '/login',
     name: 'Login',
     // route level code-splitting

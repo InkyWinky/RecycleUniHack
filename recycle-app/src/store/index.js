@@ -9,7 +9,8 @@ import {
 
 export default createStore({
   state: {
-    user: null
+    user: null,
+    listings: []
   },
   mutations: {
     SET_USER (state, user) {
