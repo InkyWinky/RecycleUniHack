@@ -2,4 +2,4 @@
 An upcycling innovation
 
 
-CLick into the recycle-app folder
+Click into the recycle-app folder for further information
